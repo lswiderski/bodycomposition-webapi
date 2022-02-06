@@ -1,0 +1,24 @@
+@url = http://localhost:4321
+@email = email@dot.com
+@password = password
+
+### GET {{url}}/
+
+POST {{url}}/upload
+Content-Type: application/json
+
+{
+"timeStamp" : -1,
+"weight": 67,
+"percentFat" : 14.9,
+"percentHydration": 58.4,
+"boneMass": 3.30,
+"muscleMass": 55.10,
+"visceralFatRating": 7,
+"physiqueRating": 5,
+"metabolicAge": 25,
+"bodyMassIndex": 20.8,
+"email": "{{email}}",
+"password": "{{password}}"
+
+}
