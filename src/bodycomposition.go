@@ -2,7 +2,7 @@ package bodycompositionwebapi
 
 import (
 	"fmt"
-	"github.com/lswiderski/bodycomposition"
+	"github.com/davidkroell/bodycomposition"
 )
 
 type BodyCompositionRequest struct {
@@ -26,9 +26,7 @@ func UploadBodyComposition(request BodyCompositionRequest) string {
 		request.Weight,
 		request.PercentFat,
 		request.PercentHydration,
-		0, // Bone %
 		request.BoneMass,
-		0, // Muscle %
 		request.MuscleMass,
 		request.VisceralFatRating,
 		request.PhysiqueRating,
