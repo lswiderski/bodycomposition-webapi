@@ -7,7 +7,7 @@ import (
 )
 
 func getInfo(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, gin.H{"message": "bodycomposition-webapi"})
+	c.IndentedJSON(http.StatusOK, gin.H{"title": "bodycomposition-webapi", "message": "for more info visit: https://github.com/lswiderski/bodycomposition-webapi"})
 }
 
 func postBodycomposition(c *gin.Context) {
@@ -28,5 +28,5 @@ func main() {
 	router :=gin.Default()
 	router.GET("/",getInfo)
 	router.POST("/upload", postBodycomposition)
-	router.Run("192.168.1.17:4321")
+	router.Run(":8080")
 }
