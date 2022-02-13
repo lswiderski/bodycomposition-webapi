@@ -16,12 +16,17 @@ func postBodycomposition(c *gin.Context) {
         return
     }
 	result := bc.UploadBodyComposition(request)
-	c.String(http.StatusCreated, result)
+	if len(result) > 0 { 
+		c.String(http.StatusBadRequest, result)
+	 } else {
+		c.String(http.StatusCreated, result)
+	}
+	
 }
 
 func main() {
 	router :=gin.Default()
 	router.GET("/",getInfo)
 	router.POST("/upload", postBodycomposition)
-	router.Run("localhost:4321")
+	router.Run("192.168.1.17:4321")
 }

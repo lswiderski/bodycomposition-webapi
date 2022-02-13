@@ -39,7 +39,7 @@ func UploadBodyComposition(request BodyCompositionRequest) string {
 		if err := bodycomposition.Upload(request.Email, request.Password, bc); err != nil {
 			result = fmt.Sprintf("%s%s","Error uploading weight to Garmin Connect: ", err.Error())
 		} else {
-			result = "Ok"	
+			result = ""	
 		}
 	return result
 }
