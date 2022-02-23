@@ -1,4 +1,4 @@
-@url = http://localhost:4321
+@url = http://localhost:8080
 @email = email@dot.com
 @password = password
 
@@ -20,5 +20,4 @@ Content-Type: application/json
 "bodyMassIndex": 20.8,
 "email": "{{email}}",
 "password": "{{password}}"
-
 }

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  bodycomposition.api:
+    image: lswiderski/bodycomposition-webapi:
+    ports:
+      - "8080:8080"
+ 

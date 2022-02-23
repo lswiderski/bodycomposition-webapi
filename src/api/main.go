@@ -7,7 +7,10 @@ import (
 )
 
 func getInfo(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, gin.H{"title": "bodycomposition-webapi", "message": "for more info visit: https://github.com/lswiderski/bodycomposition-webapi"})
+	c.IndentedJSON(http.StatusOK, gin.H{
+		"name": "bodycomposition-webapi",
+		"projectUrl": "https://github.com/lswiderski/bodycomposition-webapi",
+		"requestEndpoint": "/upload"})
 }
 
 func postBodycomposition(c *gin.Context) {
