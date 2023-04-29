@@ -2,6 +2,7 @@ package main
 
 import (
     "net/http"
+	"github.com/gin-contrib/cors"
     "github.com/gin-gonic/gin"
 	bc "github.com/lswiderski/bodycomposition-webapi"
 )
@@ -29,6 +30,7 @@ func postBodycomposition(c *gin.Context) {
 
 func main() {
 	router :=gin.Default()
+	router.Use(cors.Default())
 	router.GET("/",getInfo)
 	router.POST("/upload", postBodycomposition)
 	router.Run(":8080")
